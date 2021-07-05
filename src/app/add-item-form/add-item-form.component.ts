@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { BudgetItem } from './../../shared/models/budget-item.model';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -7,6 +8,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./add-item-form.component.scss'],
 })
 export class AddItemFormComponent implements OnInit {
+  @Input() item: BudgetItem = new BudgetItem('', null);
+
   constructor() {}
 
   ngOnInit(): void {}
